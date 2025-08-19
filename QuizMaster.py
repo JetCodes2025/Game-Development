@@ -132,7 +132,7 @@ c) Calls draw() and update() automatically.
   if we use python filename.py none of this happens and code breaks down.
 However, to make the "Run Code" button work 
 we can do this 
-if __name__ = __main__:
+if __name__ = "__main__":
   pgzrun.go()
   
 
@@ -141,4 +141,5 @@ if __name__ = __main__:
 
 
 '''
+
 
