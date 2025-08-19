@@ -119,3 +119,26 @@ load_questions()
 next_question()
 clock.schedule_interval(update_timer, 1)
 pgzrun.go()
+'''In order to run the code kindly use terminal and type the command pgzrun filename.py, make sure you are in the right directory.
+Using run code button at top right of the VS code does not works as it is eligible to run only basic python script.
+-> PygameZero (pgzrun) set up a special game loop(draw(), update(), events etc)
+-> when we run the VS code "Run Code" button, Python tries to run the file as a normal script.
+->pgzrun isn't starting the event loop propely, so things can break. In this case it was not calling the load_questions().
+-> REason why "Run Code" fails to execute pgzrun files.
+  pgzrun is not just a library- it is a runner that 
+a) Initializes the Pygam Zero environment.
+b) Wraps the game loop
+c) Calls draw() and update() automatically.
+  if we use python filename.py none of this happens and code breaks down.
+However, to make the "Run Code" button work 
+we can do this 
+if __name__ = __main__:
+  pgzrun.go()
+  
+
+
+
+
+
+'''
+
